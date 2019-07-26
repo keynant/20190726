@@ -28,3 +28,29 @@ def myStat(key1, **kwargs):
 
 
 print(myStat("name", name=11,keys = "shleem"))
+
+
+
+def getUnique(*args):
+    newList = []
+    for num in args:
+        if args.count(num) == 1:
+            newList.append(num)
+    return tuple(newList)
+
+def getNonUnique(*args):
+    newList = []
+    for num in args:
+        if args.count(num) != 1:
+            newList.append(num)
+    return tuple(set(newList))
+
+print(getUnique(1,2,3,1,2,3,1,5,7,9,6,6,6,8,7))
+print(getNonUnique(1,2,3,1,2,3,1,5,7,9,6,6,6,8,7))
+
+list1 = [1,2,3,4,5,6,7,1,3,5,7]
+
+list2 = [n for n in list1 if list1.count(n) == 1]  # same as get unique
+list3 = [n for n in list1 if list1.count(n) != 1]  # same as get non unique
+print(list2)
+print(sorted(set(list3)))
