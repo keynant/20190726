@@ -54,3 +54,16 @@ list2 = [n for n in list1 if list1.count(n) == 1]  # same as get unique
 list3 = [n for n in list1 if list1.count(n) != 1]  # same as get non unique
 print(list2)
 print(sorted(set(list3)))
+
+
+
+class Dog:
+    def __init__(self,name = "Dog"):
+        print (f'{name} is being created...')
+    def bark(self, x):
+        print("Bark "*x)
+
+pooch = Dog('Pooch')
+spot = Dog()
+pooch.bark(3)
+spot.bark(2)
